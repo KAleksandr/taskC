@@ -30,6 +30,8 @@ void input(int* mas, int *index, int *number){//Введення даних
     }
     while(!(*index >=0 && *index <N));
 }
+//приймає на вхід індекс елемента масиву, його значення і вставляє в потрібну
+//комірку масиву, якщо в даній комірці є запис, підтвердження на перезапис;
 void putEl(int *mas, int index, int number){
     while(1){
         //input(mas, index, number);
@@ -58,7 +60,8 @@ void putEl(int *mas, int index, int number){
 
     }
 }
-
+//процедура getEl(), яка приймає на вхід індекс елемента масиву і повертає значення,
+// що відповідає даному індексу. перевіряє, чи не виходить вказаний індекс за межі розмірності масиву!!!
 void getEl(int* mas, int *index){
 
     do{
@@ -68,7 +71,7 @@ void getEl(int* mas, int *index){
     while(!(*index >=0 && *index <N));
     printf("\nFind number: %i\n",mas[*index]);
 }
-
+//вивід на екран масив
 void printArr(int *mas){
     printf("\nYour array: ");
     for(int i = 0; i< N; i++){
@@ -76,6 +79,7 @@ void printArr(int *mas){
     }
     printf("\n");
 }
+//Функція запиту на повторення дій
 int repeatPr()
 {
     printf("\nRepeat? (y/n) ");
@@ -95,6 +99,7 @@ int repeatPr()
             break;
     }
 }
+
 int main()
 {
     int mas[N]={};
